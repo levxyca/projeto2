@@ -97,9 +97,25 @@
           <li><a class="header__menu-item" href="">Blog</a></li>
           <li><a class="header__menu-item" href="">Support</a></li>
         </ul>
-        <a href="https://apps.apple.com/app/apple-store/id1271086060"
-          ><button class="header__btn">Download App</button></a
-        >
+        <div class="login">
+          <a class="login__btn" href="#modal__login">Login</a>
+        </div>
+        <section id="modal__login" class="modal none">
+          <div class="modal__content">
+            <h1 class="modal__login-title">Faça login na sua conta</h2>
+            <form>
+              <input type="text" name="user" placeholder="Usuário(a)" />
+              <input type="password" name="pass" placeholder="Senha" />
+              <input
+                type="submit"
+                name="login"
+                class="login modal__login-submit"
+                value="Login"
+              />
+            </form>
+            <a href="#" class="modal__close">&times;</a>
+          </div>
+        </section>
         <img class="header__menu-mobile-img" src="img/menu.png" alt="" />
       </section>
       <section class="header__menu-mobile">
