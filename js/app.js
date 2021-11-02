@@ -38,7 +38,7 @@ btnModalRegister.addEventListener("click", () => {
 
   var ajax = new XMLHttpRequest();
 
-  ajax.open("POST", "https://reqres.in/api/login", true);
+  ajax.open("POST", "https://reqres.in/api/register", true);
   ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
   ajax.send(`email=${register.email}&password=${register.password}`);

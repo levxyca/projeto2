@@ -135,6 +135,7 @@ input[type="button"] {
   width: 30%;
   padding: 12px 20px;
   margin: 15px 0;
+  cursor: pointer;
 }
 
 .modal__close {
@@ -175,6 +176,20 @@ input[type="button"] {
 .devices {
   max-width: 100%;
   margin-top: 88px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app__title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 4.625rem;
 }
 
 @media (max-width: 768px) {
