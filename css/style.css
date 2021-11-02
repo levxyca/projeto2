@@ -82,13 +82,46 @@ body {
   opacity: 1;
 }
 
+.modal__login-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .modal__content {
   border-radius: 4px;
   position: relative;
   width: 500px;
   max-width: 90%;
+  height: 250px;
   background: #fff;
   padding: 1em 2em;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="button"] {
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #4aa1ff;
+  color: #fff;
+  border-radius: 15px;
+  border: none;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 15px 0;
 }
 
 .modal__close {
