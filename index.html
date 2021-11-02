@@ -100,15 +100,16 @@
         <div class="login">
           <a class="login__btn" href="#modal__login">Login</a>
         </div>
-        <section id="modal__login" class="modal none">
+        <section id="modal__login" class="modal">
           <div class="modal__content">
             <h1 class="modal__login-title">Faça login na sua conta</h2>
-            <form>
-              <input type="text" name="user" placeholder="Usuário(a)" />
-              <input type="password" name="pass" placeholder="Senha" />
+            <form class="form">
+              <input type="text" id="user" name="user" placeholder="Usuário(a)" />
+              <input type="password" id="pass" name="pass" placeholder="Senha" />
               <input
-                type="submit"
+                type="button"
                 name="login"
+                id="login__submit"
                 class="login modal__login-submit"
                 value="Login"
               />
@@ -179,5 +180,6 @@
       />
     </section>
     <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
