@@ -106,6 +106,7 @@
             <form class="form">
               <input type="text" id="user" name="user" placeholder="Usuário(a)" />
               <input type="password" id="pass" name="pass" placeholder="Senha" />
+              <p>Não possui uma conta?</p><a href="#modal__register">Se registre aqui.</a>
               <input
                 type="button"
                 name="login"
@@ -116,6 +117,23 @@
             </form>
             <a href="#" class="modal__close">&times;</a>
           </div>
+          </div>
+        </section>
+        <section id="modal__register" class="modal__register">
+          <div class="modal__content">
+            <h1 class="modal__register-title">Crie sua conta</h2>
+            <form class="form">
+              <input type="text" id="userRegister" name="user" placeholder="Usuário(a)" />
+              <input type="password" id="passRegister" name="pass" placeholder="Senha" />
+              <input
+                type="button"
+                name="register"
+                id="register__submit"
+                class="login modal__register-submit"
+                value="Registrar"
+              />
+            </form>
+            <a href="#" class="modal__close">&times;</a>
         </section>
         <img class="header__menu-mobile-img" src="img/menu.png" alt="" />
       </section>

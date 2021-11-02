@@ -62,7 +62,8 @@ body {
   cursor: pointer;
 }
 
-.modal {
+.modal,
+.modal__register {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -77,12 +78,14 @@ body {
   transition: all 0.4s;
 }
 
-.modal:target {
+.modal:target,
+.modal__register:target {
   visibility: visible;
   opacity: 1;
 }
 
-.modal__login-title {
+.modal__login-title,
+.modal__register-title {
   font-size: 2rem;
   font-weight: 600;
   margin: 20px 0;
@@ -94,12 +97,22 @@ body {
   flex-wrap: wrap;
 }
 
+.form p {
+  margin: 5px 0;
+}
+
+.form a {
+  text-decoration: none;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
 .modal__content {
   border-radius: 4px;
   position: relative;
   width: 500px;
   max-width: 90%;
-  height: 250px;
+  height: 300px;
   background: #fff;
   padding: 1em 2em;
 }
