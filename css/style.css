@@ -97,6 +97,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .form p {
@@ -133,7 +134,6 @@ input[type="button"] {
   color: #fff;
   border-radius: 15px;
   border: none;
-  width: 30%;
   padding: 12px 20px;
   margin: 15px 0;
   cursor: pointer;
@@ -192,10 +192,22 @@ input[type="button"] {
   height: 100vh;
 }
 
+.app__container {
+  width: 80%;
+}
+
 .app__title {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 600;
-  line-height: 4.625rem;
+  line-height: 1.2em;
+}
+
+#app_btn {
+  margin: 30px 0;
+}
+
+.app__image {
+  max-width: 50%;
 }
 
 @media (max-width: 768px) {
