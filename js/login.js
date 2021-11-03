@@ -20,7 +20,6 @@ btnModalLogin.addEventListener("click", () => {
   ajax.onreadystatechange = function () {
     const respostaErroLogin = document.querySelector(".modal__login-error");
     if (ajax.status == 200) {
-      var data = ajax.responseText;
       const title = document.querySelector(".modal__login-title");
       const titleSucesso = document.querySelector(
         ".modal__login-title-sucesso"
@@ -59,10 +58,30 @@ btnModalRegister.addEventListener("click", () => {
   ajax.send(`email=${register.email}&password=${register.password}`);
 
   ajax.onreadystatechange = function () {
+    const respostaErroRegister = document.querySelector(
+      ".modal__register-error"
+    );
     if (ajax.status == 200) {
-      var data = ajax.responseText;
+      const title = document.querySelector(".modal__register-title");
+      const titleSucesso = document.querySelector(
+        ".modal__register-title-sucesso"
+      );
+      const form = document.querySelector(".modal__register-form");
+
+      respostaErroRegister.classList.toggle("none");
+      form.classList.toggle("none");
+      title.classList.toggle("none");
+      titleSucesso.classList.toggle("none");
     } else {
-      console.log("ERRO");
+      if (register.email == "" || register.password == "") {
+        respostaErroRegister.innerHTML = "O campo não pode estar vazio!";
+      } else if (register.email.length < 3 || register.password.length < 3) {
+        respostaErroRegister.innerHTML =
+          "Você precisa inserir mais de 3 dígitos!";
+      } else {
+        respostaErroRegister.innerHTML =
+          "Por favor, preencha os campos corretamente!";
+      }
     }
   };
 });

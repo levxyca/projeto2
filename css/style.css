@@ -86,7 +86,8 @@ body {
 
 .modal__login-title,
 .modal__register-title,
-.modal__login-title-sucesso {
+.modal__login-title-sucesso,
+.modal__register-title-sucesso {
   font-size: 2rem;
   font-weight: 600;
   margin: 20px 0;
@@ -146,7 +147,8 @@ input[type="button"] {
   text-decoration: none;
 }
 
-.modal__login-error {
+.modal__login-error,
+.modal__register-error {
   color: red;
 }
 
