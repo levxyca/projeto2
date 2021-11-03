@@ -146,6 +146,10 @@ input[type="button"] {
   text-decoration: none;
 }
 
+.modal__login-error {
+  color: red;
+}
+
 .content {
   text-align: center;
 }

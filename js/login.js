@@ -18,6 +18,7 @@ btnModalLogin.addEventListener("click", () => {
   ajax.send(`email=${login.email}&password=${login.password}`);
 
   ajax.onreadystatechange = function () {
+    const respostaErroLogin = document.querySelector(".modal__login-error");
     if (ajax.status == 200) {
       var data = ajax.responseText;
       const title = document.querySelector(".modal__login-title");
@@ -26,11 +27,13 @@ btnModalLogin.addEventListener("click", () => {
       );
       const form = document.querySelector(".modal__login-form");
 
+      respostaErroLogin.classList.toggle("none");
       form.classList.toggle("none");
       title.classList.toggle("none");
       titleSucesso.classList.toggle("none");
     } else {
-      console.log("ERRO");
+      respostaErroLogin.innerHTML =
+        "Desculpe, ocorreu um erro ao tentar realizar o seu login.";
     }
   };
 });
