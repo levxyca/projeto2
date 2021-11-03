@@ -26,11 +26,15 @@ btnModalLogin.addEventListener("click", () => {
         ".modal__login-title-sucesso"
       );
       const form = document.querySelector(".modal__login-form");
+      const home = document.querySelector(".home");
+      const app = document.querySelector(".app");
 
       respostaErroLogin.classList.toggle("none");
       form.classList.toggle("none");
       title.classList.toggle("none");
       titleSucesso.classList.toggle("none");
+      home.classList.toggle("none");
+      app.classList.toggle("none");
     } else {
       respostaErroLogin.innerHTML =
         "Desculpe, ocorreu um erro ao tentar realizar o seu login.";
