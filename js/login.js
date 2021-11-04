@@ -20,6 +20,9 @@ btnModalLogin.addEventListener("click", () => {
   ajax.onreadystatechange = function () {
     const respostaErroLogin = document.querySelector(".modal__login-error");
     if (ajax.status == 200) {
+      localStorage.setItem('logged', true);
+
+
       const title = document.querySelector(".modal__login-title");
       const titleSucesso = document.querySelector(
         ".modal__login-title-sucesso"
