@@ -20,8 +20,7 @@ btnModalLogin.addEventListener("click", () => {
   ajax.onreadystatechange = function () {
     const respostaErroLogin = document.querySelector(".modal__login-error");
     if (ajax.status == 200) {
-      localStorage.setItem('logged', true);
-
+      localStorage.setItem("logged", true);
 
       const title = document.querySelector(".modal__login-title");
       const titleSucesso = document.querySelector(
@@ -38,8 +37,15 @@ btnModalLogin.addEventListener("click", () => {
       home.classList.toggle("none");
       app.classList.toggle("none");
     } else {
-      respostaErroLogin.innerHTML =
-        "Desculpe, ocorreu um erro ao tentar realizar o seu login.";
+      if (login.email == "" || login.password == "") {
+        respostaErroLogin.innerHTML = "O campo não pode estar vazio!";
+      } else if (login.email.length < 3 || login.password.length < 3) {
+        respostaErroLogin.innerHTML =
+          "Você precisa inserir mais de 3 dígitos!";
+      } else {
+        respostaErroLogin.innerHTML =
+          "Desculpe, ocorreu um erro ao tentar realizar o seu login.";
+      }
     }
   };
 });
