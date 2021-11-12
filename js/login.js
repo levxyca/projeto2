@@ -21,6 +21,7 @@ btnModalLogin.addEventListener("click", () => {
     const respostaErroLogin = document.querySelector(".modal__login-error");
     if (ajax.status == 200) {
       localStorage.setItem("logged", true);
+      localStorage.setItem("token", ajax.responseText);
 
       const title = document.querySelector(".modal__login-title");
       const titleSucesso = document.querySelector(
